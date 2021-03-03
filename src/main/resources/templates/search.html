@@ -13,7 +13,7 @@
     <form th:action="@{/search/results}" method = "post">
         <h2>Search by:</h2>
 
-        <p>
+        <p >
             <span th:each="column : ${columns}">
                 <input
                         type="radio"
@@ -37,6 +37,9 @@
     <hr />
 
     <!-- TODO #4 - Loop over the search results to display all job fields. -->
+   <table th:replace="list-jobs :: Job-loop">
+
+   </table>
 
 </div>
 
